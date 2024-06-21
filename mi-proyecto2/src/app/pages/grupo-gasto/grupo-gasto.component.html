@@ -1,0 +1,71 @@
+<body class="text-center" cz-shortcut-listen="true">
+    <img class="mb-4 mt-4" src="../../../assets/images/manos_juntas.avif" alt width="100" height="100">
+    <div class="col-md-4 offset-4 mt-4 pt-3 pb-3">
+        <form action="form-group">
+            <label class="lora " for="email">Email invitado</label>
+            <br>
+            <input class="form-control" type="email">
+            <button type="submit" class="btn btn-primary">Invitar</button>
+        </form>
+    </div>
+    <div class="container col-md-4 offset-4 mt-4 pt-3 pb-3">
+        <div class="table-responsive">
+            <table class="table table-condensed">
+                <thead>
+                    <tr>
+                        <th>Invitados</th>
+                        <th>Aceptaron</th>
+                        <th>Rechazaron</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>5</td>
+                        <td>1</td>
+                        <td>4</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">
+            <h1 class="col-md-4 offset-4 mt-2 pt-3 pb-3 h3 mb-2 font-weight-normal lora">Integrantes Gasto </h1>
+        </div>
+    </div>
+    <div class="card container">
+        <div class="table-responsive">
+            <table class="table table-condensed">
+                <thead>
+                    <tr>
+                        <th scope="col">id</th>
+                        <th scope="col">Nombre Usuario</th>
+                        <th scope="col">Nombre Gasto</th>
+                        <th scope="col">Valor Total</th>
+                        <th scope="col">Número de Integrantes</th>
+                        <th scope="col">Cuota por persona</th>
+                        <th scope="col">Estado</th>
+                        <td>Acciones</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let g of grupo">
+                        <th scope="row">{{g.Id_dg}}</th>
+                        <td>{{g.Nombre_Usuario}}</td>
+                        <td>{{g.Nombre_Gasto}}</td>
+                        <td>{{g.Valor_Total}}</td>
+                        <td>{{g.N_integrantes}}</td>
+                        <td>{{g.Cuota_Persona}}</td>
+                        <td>{{g.Estado}}</td>
+                        <td><button (click)="update()" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i>
+                            </button><button (click)="eliminar()" class="btn btn-danger"><i
+                                    class="fa-solid fa-trash"></i></button>
+                        </td>
+
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>

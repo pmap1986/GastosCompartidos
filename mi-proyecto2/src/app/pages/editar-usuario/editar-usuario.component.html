@@ -1,0 +1,26 @@
+<body class="text-center" cz-shortcut-listen="true">
+    <div class="row">
+        <div class="col-md-4 offset-4 mt-4">
+            <form class="form-register" [formGroup]="formcontrol" (ngSubmit)="update(usuario)">
+                <img class="mb-4" src="../../../assets/images/manos.jpg" alt width="200" height="200">
+                <h1 class="h3 mb-3 font-weight-normal">Editar Usuario</h1>
+                <br>
+                <label for="InputNombre" class="sr-only">Nombre</label>
+                <input type="nombre" class="form-control" id="Inputnombre" placeholder="Nombre" required autofocus
+                    formControlName="Nombre">
+                <br>
+                <label for="InputCelular" class="sr-only">Celular</label>
+                <input type="number" class="form-control" id="Inputcelular" placeholder="Celular" required autofocus
+                    formControlName="Celular">
+                <br>
+                <label for="InputEmail1" class="sr-only">Email</label>
+                <input type="email" class="form-control" id="InputEmail1" placeholder="Email" required autofocus
+                    formControlName="Email">
+                <br>      
+                <br>
+
+                <button type="submit" class="btn btn-primary">Actualizar</button>
+            </form>
+        </div>
+    </div>
+</body>

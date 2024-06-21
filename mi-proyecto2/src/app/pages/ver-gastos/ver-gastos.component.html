@@ -1,0 +1,42 @@
+<body class="text-center" cz-shortcut-listen="true">
+    <img class="mb-4 mt-4" src="../../../assets/images/manos_juntas.avif" alt width="100" height="100">
+    <div class="card">
+        <div class="card-header">
+            <h1 class="lora h3 mb-3 font-weight-bold lora">Lista de Gastos</h1>
+        </div>
+    </div>
+    <div class="card container">
+        <div class="table-responsive"></div>
+        <table class="table table-condensed">
+            <thead>
+                <tr>
+                    <th scope="col">id</th>
+                    <th scope="col">Nombre del Gasto</th>
+                    <th scope="col">Tipo de gasto</th>
+                    <th scope="col">Nombre del Usuario</th>
+                    <th scope="col">Valor Total</th>
+                    <th scope="col">Número de Integrantes</th>
+                    <th scope="col">Número de Cuotas</th>
+                    <th scope="col">Fecha de Creación</th>
+                    <th scope="col">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let g of gastos">
+                    <th scope="row">{{g.Id_gasto}}</th>
+                    <td>{{g.Nombre_Gasto}}</td>
+                    <td>{{g.tipo}}</td>
+                    <td>{{g.Nombre_Usuario}}</td>
+                    <td>{{g.valor_total}}</td>
+                    <td>{{g.n_integrantes}}</td>
+                    <td>{{g.n_cuotas}}</td>
+                    <td>{{g.fechaCreacion}}</td>
+                    <td><button (click)="update(g)" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i>
+                        </button><button (click)="eliminar(g)" class="btn btn-danger"><i class="fa-solid fa-trash"></i>
+                        </button><button (click)="ver(g)" class="btn btn-primary"><i class="fa-solid fa-eye"></i>
+                        </button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>

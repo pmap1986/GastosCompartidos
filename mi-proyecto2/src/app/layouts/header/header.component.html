@@ -1,0 +1,16 @@
+<header>
+    <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li><a routerLink="/">Inicio</a></li>
+            <li *ngIf="!islogin"><a routerLink="/login">Iniciar Sesión</a></li>
+            <li *ngIf="!islogin"><a routerLink="/registro">Crear Cuenta</a></li>
+            <li *ngIf="islogin"><a routerLink="/crear-gasto">Crear Gasto</a></li>
+            <li *ngIf="islogin"><a routerLink="/ver-gastos">Lista de Gastos</a></li>
+            <li *ngIf="islogin"><a routerLink="/lista-usuarios">Lista Usuarios</a></li>
+            <li *ngIf="islogin"><a (click)="logout()">Cerrar Sesión</a></li>
+        </ul>        
+        <div *ngIf="islogin" class="text-end">
+            <h6 class="text-light">Bienvenido {{ nombre }}</h6>
+        </div>
+    </nav>
+</header>

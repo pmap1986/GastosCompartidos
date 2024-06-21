@@ -1,0 +1,59 @@
+<body class="text-center" cz-shortcut-listen="true" >
+    <div class="container">
+        <div class="row ">
+            <div class="card col-md-6 offset-3 mt-4 pt-3 pb-3">
+                <form class="" [formGroup]="formcontrol" (ngSubmit)="crear_gasto($event)">
+                    <img class="mb-4" src="../../../assets/images/manos_juntas.avif" alt width="150px" height="150px">
+                    <h1 class="h3 mb-3 font-weight-bold lora">Crear Gasto</h1>
+                    <div class="form-row">
+                        <div class="col-md-4"></div>
+                        <div class="form-group col-md-4" style="width: min-content;">
+                            <label for="id">Id</label>
+                            <input type="text" class="form-control" id="Id_gasto" formControlName="Id_gasto" >
+                        </div>
+                        <div class="col-md-4"></div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="nombreg">Nombre del Gasto</label>
+                            <input type="text" class="form-control" id="nombreg" formControlName="Nombre_Gasto" placeholder="ej: Viaje a...">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="tipo">Tipo de Gasto</label>
+                            <select formControlName="tipo" class="form-control"  name="tipo">
+                                <option value="" selected>Seleccionar</option>
+                                <option *ngFor="let t of tipos" [value]="t.IdG">{{t.Tipo}}</option>
+                            </select>
+                        </div>
+                    </div>
+                        
+                    
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="integrantes">Integrantes</label>
+                            <input type="number" class="form-control" id="integrantes" placeholder="cantidad de Integrantes" formControlName="n_integrantes">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="cuotas">Número de cuotas</label>
+                            <input type="number" class="form-control" id="cuotas" placeholder="cantidad de cuotas" formControlName="n_cuotas">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="valor">Valor Total</label>
+                            <input type="text" class="form-control" id="valor" formControlName="Valor_total" placeholder="valor sin puntos ni comas">
+                        </div>
+                        
+                        <div class="form-group col-md-6">
+                            <label for="date">Fecha de Creación</label>
+                            <input type="date" class="form-control" id="date" formControlName="Fecha_Creacion">
+                        </div>
+                    </div>
+                        <button type="submit" class="btn">Crear Gasto</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>

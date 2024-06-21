@@ -1,0 +1,30 @@
+<body class="text-center" cz-shortcut-listen="true">
+    <div class="row">
+        <div class="col-md-4 offset-4 mt-4">
+            <form class="form-register" [formGroup]="formcontrol" (ngSubmit)="update(gasto)">
+                <img class="mb-4" src="../../../assets/images/manos.jpg" alt width="200" height="200">
+                <h1 class="h3 mb-3 font-weight-normal">Editar Gasto</h1>
+                <br>
+                <label for="InputNombre" class="sr-only">Nombre del Gasto</label>
+                <input type="text" class="form-control" id="Inputnombre" placeholder="Nombre" required autofocus
+                    formControlName="nombre_gasto">
+                <br>                
+                <label for="InputCelular" class="sr-only">Valor Total</label>
+                <input type="number" class="form-control" id="Inputcelular" placeholder="Celular" required autofocus
+                    formControlName="valor_total">
+                <br>
+                <label for="InputCelular" class="sr-only">Número de Integrantes</label>
+                <input type="number" class="form-control" id="Inputcelular" placeholder="Celular" required autofocus
+                    formControlName="n_integrantes">
+                <br>
+                <label for="InputCelular" class="sr-only">Número de cuotas</label>
+                <input type="number" class="form-control" id="Inputcelular" placeholder="Celular" required autofocus
+                    formControlName="n_cuotas">
+                <br>                
+                <br>      
+                <br>
+                <button type="submit" class="btn btn-primary">Actualizar</button>
+            </form>
+        </div>
+    </div>
+</body>

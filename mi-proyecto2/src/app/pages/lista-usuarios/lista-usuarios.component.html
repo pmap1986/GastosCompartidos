@@ -1,0 +1,45 @@
+<body class="text-center mt-6" cz-shortcut-listen="true">
+
+    <div class="card mt-4 ">
+        <div class="card-header">
+            <h1 class="lora h3 pt-2 pb-2 font-weight-bold lora">Lista de Usuarios</h1>
+        </div>
+    </div>
+    <div class="card">
+        <div class="container">
+            <div class="table-responsive">
+                <table class="table table-condensed">
+                    <thead>
+                        <tr>
+                            <th scope="col">id</th>
+                            <th scope="col">Nombre Usuario</th>
+                            <th scope="col">Celular</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Fecha de Ingreso</th>
+                            <th scope="col">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let u of usuarios">
+                            <th scope="row">{{u.Id_usuario}}</th>
+                            <td>{{u.nombre}}</td>
+                            <td>{{u.celular}}</td>
+                            <td>{{u.email}}</td>
+                            <td>{{u.fechaIngreso}}</td>
+                            <td><button (click)="update(u)" class="btn btn-primary"><i
+                                        class="fa-solid fa-pen-to-square"></i></button>
+                                <button (click)="eliminar(u)" class="btn btn-danger"><i
+                                        class="fa-solid fa-trash"></i></button>
+                                <button (click)="ver(u)" class="btn btn-primary"><i
+                                        class="fa-solid fa-eye"></i></button>
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>

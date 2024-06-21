@@ -1,0 +1,36 @@
+<body class="text-center" cz-shortcut-listen="true">
+    <div class="row">
+        <div class="card col-md-6 offset-3 mt-4 pt-3 pb-3">
+            <form class="form-signin" [formGroup]="formcontrol" (ngSubmit)="iniciar_sesion($event)" autocomplete="off">
+                <img class="mb-4" src="../../../assets/images/manos_juntas.avif" alt width="100" height="100">
+                <h1 class="h3 mb-3 font-weight-bold lora">Iniciar Sesión </h1>
+
+                <div class="row mt-2 mb-2 pb-3">
+                    <div class="col-12 input-group">
+                        <label for="InputEmail1" class="sr-only">Email</label>
+                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        <input type="email" class="form-control" id="InputEmail1" placeholder="email" required
+                            formControlName="email">
+                    </div>
+                </div>                
+                <div class="row mb-2 pb-3">
+                    <div class="col-12 input-group">
+                        <label for="InputPassword1" class="sr-only">Password</label>
+                        <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                        <input type="password" class="form-control" id="InputPassword1" placeholder="password"
+                            formControlName="password" required>
+                    </div>
+                </div>
+
+                <div class="checkbox mb-3">
+                    <label><input type="checkbox" value="remember-me"> Recordarme
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-primary font-weight-normal">Iniciar Sesión</button>
+                <br>
+
+
+            </form>
+        </div>
+    </div>
+</body>
